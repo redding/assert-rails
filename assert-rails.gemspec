@@ -6,11 +6,11 @@ require "assert-rails/version"
 Gem::Specification.new do |gem|
   gem.name        = "assert-rails"
   gem.version     = AssertRails::VERSION
-  gem.authors     = ["TODO: authors"]
-  gem.email       = ["TODO: emails"]
-  gem.summary     = "TODO: Write a gem summary"
-  gem.description = "TODO: Write a gem description"
-  gem.homepage    = "TODO: homepage"
+  gem.authors     = ["Kelly Redding", "Collin Redding"]
+  gem.email       = ["kelly@kellyredding.com", "collin.redding@me.com"]
+  gem.summary     = "Use Assert for testing Rails applications."
+  gem.description = "Use Assert for testing Rails applications."
+  gem.homepage    = "https://github.com/redding/assert-rails"
   gem.license     = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
@@ -18,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency("assert", ["~> 2.16.3"])
-  # TODO: gem.add_dependency("gem-name", ["~> 0.0.0"])
+  gem.add_development_dependency("assert", ["~> 2.16.5"])
 
 end

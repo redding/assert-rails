@@ -1,6 +1,6 @@
-# AssertRails
+# Assert-Rails
 
-TODO: Write a gem description
+Use Assert for testing Rails applications.
 
 ## Usage
 
