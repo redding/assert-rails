@@ -1,6 +1,6 @@
 # Assert-Rails
 
-Use Assert for testing Rails applications.
+Use Assert for testing Rails applications.  See https://github.com/redding/assert for reference.
 
 ## Usage
 

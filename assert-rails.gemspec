@@ -13,11 +13,13 @@ Gem::Specification.new do |gem|
   gem.homepage    = "https://github.com/redding/assert-rails"
   gem.license     = 'MIT'
 
-  gem.files         = `git ls-files`.split($/)
+  gem.files         = `git ls-files | grep "^[^.]"`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency("assert", ["~> 2.16.5"])
+  gem.required_ruby_version = '> 1.8'
+
+  gem.add_dependency("assert", ["~> 2.17.0"])
 
 end
