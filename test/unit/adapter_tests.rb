@@ -23,9 +23,12 @@ module AssertRails::Adapter
     subject{ @adapter }
 
     should have_imeths :reset_db
+    should have_imeths :transaction, :rollback!
 
     should "not implement its adapter methods" do
       assert_raises(NotImplementedError){ subject.reset_db }
+      assert_raises(NotImplementedError){ subject.transaction }
+      assert_raises(NotImplementedError){ subject.rollback! }
     end
 
   end

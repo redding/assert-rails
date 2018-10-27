@@ -1,4 +1,6 @@
 require "assert-rails/version"
+require "assert-rails/adapter"
+require "assert-rails/db_tests"
 
 module AssertRails
 
@@ -16,6 +18,14 @@ module AssertRails
 
   def self.reset_db!
     self.adapter.reset_db
+  end
+
+  def self.transaction(&block)
+    self.adapter.transaction(&block)
+  end
+
+  def self.rollback!
+    self.adapter.rollback!
   end
 
   class DefaultAdapter
