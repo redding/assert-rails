@@ -12,6 +12,7 @@ module AssertRails
 
     should have_imeths :adapter
     should have_imeths :reset_db, :reset_db!
+    should have_imeths :transaction, :rollback!
 
     should "set the DefaultAdapter as its adapter by default" do
       assert_instance_of DefaultAdapter, AssertRails.adapter
@@ -19,6 +20,8 @@ module AssertRails
 
     should "call to the adapter for its adapter methods" do
       assert_raises(NotImplementedError){ subject.reset_db }
+      assert_raises(NotImplementedError){ subject.transaction }
+      assert_raises(NotImplementedError){ subject.rollback! }
     end
 
   end
