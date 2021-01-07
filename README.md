@@ -1,3 +1,5 @@
+=== **This has been archived and is not maintained.** ===
+
 # Assert-Rails
 
 Use Assert for testing Rails applications.  See https://github.com/redding/assert for reference.
